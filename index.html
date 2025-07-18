@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Currículum Vitae - Luis Asael Rosario Mejía</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <script defer src="modo-oscuro.js"></script>
+</head>
+<body>
+    <div class="cv-container">
+        <header>
+            <img src="cv.png" alt="Tu Foto" class="foto" />
+            <h1>Luis Asael Rosario Mejia</h1>
+            <p class="titulo">Estudiante Ingeniería En Sistemas | Técnico En Informática</p>
+            <p class="contacto">📧 asaelrm11@gmail.com | 📞 (840) 450-6497</p>
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/_asaelrosario" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+            <button id="descargar-pdf">📄 Descargar PDF</button>
+        </header>
+
+        <section class="perfil">
+            <h2>Perfil Profesional</h2>
+            <p>Soy un profesional apasionado por la tecnología con experiencia en desarrollo web front-end, diseño responsivo y creación de experiencias de usuario atractivas.</p>
+        </section>
+
+        <section class="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <div class="item">
+                <h3>GESTOR DE SEGUROS MÉDICOS - CM UCE</h3>
+                <span>2021 - 2022</span>
+                <p>Autorizaciones médicas, servicios ambulatorios, facturación de laboratorios y atención al cliente.</p>
+            </div>
+            <div class="item">
+                <h3>SOPORTE TÉCNICO - CM UCE</h3>
+                <span>2020 - Actualidad</span>
+                <p>Instalación y configuración de equipos, soporte técnico a usuarios, mantenimiento de software, asistencia remota y diagnóstico.</p>
+            </div>
+        </section>
+
+        <section class="educacion">
+            <h2>Educación</h2>
+            <div class="item">
+                <h3>Técnico en Informática</h3>
+                <h3>Estudiante de Ingeniería en Sistemas</h3>
+                <span>Universidad O&M</span>
+            </div>
+        </section>
+
+        <section class="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Técnico en informática</li>
+                <li>Paquete de Office</li>
+                <li>Manejo de Programas de escritorio</li>
+                <li>Responsive Web Design</li>
+                <li>Programación básico Python</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>© 2025 Luis Asael Rosario Mejía - Todos los derechos reservados.</p>
+            <button id="modo-toggle">🌙 Modo Oscuro</button>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        ScrollReveal().reveal('header', {
+            duration: 1000,
+            origin: 'top',
+            distance: '50px',
+            reset: true
+        });
+        ScrollReveal().reveal('.perfil, .experiencia, .educacion, .habilidades, footer', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '40px',
+            interval: 200,
+            reset: true
+        });
+        ScrollReveal().reveal('.item', {
+            duration: 1000,
+            origin: 'left',
+            distance: '30px',
+            interval: 100,
+            reset: true
+        });
+    </script>
+
+    <div class="color-picker">
+    <span>🎨 Cambiar color:</span>
+    <button class="color-btn" data-color="#3b82f6" style="background:#3b82f6;"></button>
+    <button class="color-btn" data-color="#10b981" style="background:#10b981;"></button>
+    <button class="color-btn" data-color="#f59e0b" style="background:#f59e0b;"></button>
+    <button class="color-btn" data-color="#ef4444" style="background:#ef4444;"></button>
+</div>
+
+</body>
+</html>

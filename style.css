@@ -1,0 +1,255 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Paleta y fuentes */
+:root {
+    --color-fondo: #f5f9ff;
+    --color-principal: #3b82f6;
+    --color-secundario: #0f172a;
+    --color-texto: #1e293b;
+    --color-claro: #ffffff;
+    --color-sombra: rgba(0, 0, 0, 0.05);
+    --color-hover: #dbeafe;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 30px 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Container principal */
+.cv-container {
+    max-width: 900px;
+    margin: auto;
+    background: var(--color-claro);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px var(--color-sombra);
+    transition: all 0.4s ease;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-principal);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+h1 {
+    margin-top: 15px;
+    font-size: 2.4rem;
+    color: var(--color-secundario);
+}
+
+.titulo {
+    font-size: 1.2rem;
+    color: var(--color-principal);
+    margin-top: 5px;
+}
+
+.contacto {
+    font-size: 0.95rem;
+    color: #475569;
+    margin-top: 10px;
+}
+
+.redes-sociales {
+    margin-top: 12px;
+}
+
+.redes-sociales a {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #2563eb;
+    transform: scale(1.2);
+}
+
+#descargar-pdf, #modo-toggle {
+    margin: 15px 5px 0 5px;
+    background: var(--color-principal);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#descargar-pdf:hover,
+#modo-toggle:hover {
+    background: #2563eb;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--color-principal);
+    margin-bottom: 15px;
+    border-left: 4px solid var(--color-principal);
+    padding-left: 12px;
+}
+
+.item {
+    margin-bottom: 18px;
+}
+
+.item h3 {
+    font-size: 1.1rem;
+    color: var(--color-texto);
+}
+
+.item span {
+    font-size: 0.9rem;
+    color: #64748b;
+    display: block;
+    margin: 5px 0;
+}
+
+.item p {
+    color: #334155;
+}
+
+/* Lista de habilidades */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: var(--color-hover);
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    color: var(--color-secundario);
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+}
+
+ul li:hover {
+    background: #bfdbfe;
+    transform: translateX(6px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+}
+
+/* Modo Oscuro */
+body.dark {
+    background: #0f172a;
+    color: #f1f5f9;
+}
+
+body.dark .cv-container {
+    background: #1e293b;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark .item p {
+    color: #f8fafc;
+}
+
+body.dark ul li {
+    background: #334155;
+    color: #e2e8f0;
+}
+
+body.dark footer {
+    color: #94a3b8;
+    border-top: 1px solid #334155;
+}
+
+body.dark .redes-sociales a {
+    color: #93c5fd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .foto {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .cv-container {
+        padding: 20px;
+    }
+
+    #modo-toggle,
+    #descargar-pdf {
+        position: relative;
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Animación de entrada al cargar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cv-container {
+    animation: fadeInUp 1s ease-out;
+}
+
+.color-picker {
+    margin-top: 20px;
+    text-align: center;
+    color: #475569;
+}
+
+.color-picker .color-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0 6px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: 2px solid transparent;
+    transition: transform 0.3s ease;
+}
+
+.color-picker .color-btn:hover {
+    transform: scale(1.2);
+}
